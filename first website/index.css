@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 p{
     /* background-color: aquamarine; */
     color: black;
@@ -155,6 +159,7 @@ p{
     flex-direction: row;
     list-style-type: none;
     justify-items: center;
+    flex-wrap: wrap;
 }
 
 .flexlist li{
@@ -186,7 +191,8 @@ p{
     background-color: lightgrey;
     border-radius: 5px;
     text-align: center;
-    margin: 1px 30px;
+    margin: 1px 10px;
+    box-sizing: border-box;
 }
 
 .aboutform{
@@ -198,8 +204,38 @@ p{
     padding: 10px;
 }
 
+.aboutform input, .aboutform textarea{
+    width: 100%;
+}
+
 .grid-container{
-    display: inline-grid;
-    grid-template-columns: repeat(1, 2fr)
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100px 100px;
     gap: 10px;
+    justify-content: space-around;
+    /* border: 2px double blue; */
+    margin-bottom: 5px;
+}   
+
+.grid{
+    background-color: yellowgreen;
+    color: #333;
+}
+
+.grid h2{
+    text-align: center;
+    padding-top: 20px;
+    /* padding-bottom: 2px; */
+    }
+
+.grid-container > div{
+    background-color: lightblue;
+    border: 3px double black;
+    padding: 2px 2px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
 }
