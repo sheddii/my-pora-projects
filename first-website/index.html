@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>My Website Portfolio</h1>
+
+    <p>This is a sample of the following websitess i have developed from scratch to finish.<br/>Just take a look</p>
+    <a href="klokkit.com">Klokkit</a><br/>
+    <a href="https://seededoc.lovable.app">SeeDeDoc</a>
+    <img source="C:/Users/USER/Pictures/Camera Roll/WIN_20250627_22_50_56_Pro.jpg" alt="">
+
+    <h1>FORMS AND SEMANTIC HTML</h1>
+    <form>
+        <label>
+            Login/Signup
+        </label><br/>
+
+        <label>
+            Name:
+        </label>
+        <input type="text" placeholder="Enter Name"><br/>
+        <label>Password:</label>
+        <input type="text" placeholder="Enter Password"><br/>
+        <input type="submit" value="Login">
+        <button type="submit">Login</button>
+    </form>
+
+    <section class="forLayout">
+        <h1>Layout and responsiveness</h1>
+        <p>This is to address the box models which comprises padding, border, margin, flex and grid</p>
+
+        <div class="container">
+            <h2>FLEX EXAMPLES</h2>
+            <p>This is just to explain how to implement the different Flex properties</p>
+
+            <ul class="flexlist">
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+            </ul>
+        </div>
+    </section>
+
+    <main class="about">
+        <h1>ABOUT ME</h1>
+        <p>My name is Shedrack, a web developer with a passion for creating innovative and user-friendly websites. With a strong background in HTML, CSS, and JavaScript. I have honed my skills in front-end development to bring ideas to life on the web. I am dedicated to crafting responsive and visually appealing designs that provide seamless user experiences. My goal is to continuously learn and grow in the ever-evolving field of web development, while delivering high-quality projects that exceed client expectations.</p>
+        <h2>Contact Information</h2>
+        <p>Email: shedrackchukwuemeka2@gmail.com</p>
+
+        <section class="forabout">
+            <h2>Book an appointment</h2>
+
+            <form class="aboutform" action="mailto:shedrackchukwuemeka2@gmail.com" method="post" enctype="text/plain">
+
+                <label class="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name"><br/><br/>
+
+                <label class="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter Your email"><br/><br/>
+
+                <label class="message">Message:</label><br/>
+                <textarea id="message" name="message" placeholder="Enter your message"></textarea><br/><br/>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+    </main>
+
+    <section class ="grid">
+        <h2>GRID EXAMPLE</h2>
+        <p>This is just to showcase the different Grid patterns</p>
+
+        <div class="grid-container">
+            <div>Grid item 1</div>
+            <div>Grid item 2</div>
+            <div>Grid item 3</div>
+            <div>Grid item 4</div>
+        </div>
+    </section>
+
+    <script src="myScript.js"></script>
+</body>
+</html>
