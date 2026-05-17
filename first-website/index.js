@@ -109,3 +109,98 @@ if(age < 12) {
 }
 
 console.log("Is adult:", isAdult);
+
+// let username = prompt("Please enter your username:");
+
+// if (username == true) {
+//   console.log("Welcome " + username);
+// } else {
+//   console.log("Please enter username");
+// }
+
+// CONDITIONALS 2
+
+
+// const prompt = require('prompt-sync')();
+
+// let score = parseInt(prompt("Please enter your score: "));
+
+let score = 69;
+
+if (score >= 70) {
+  console.log("Grade A");
+}
+else if (score >= 60 && score < 70) {
+  console.log("Grade B");
+}
+else if (score >= 50 && score < 60) {
+  console.log("Grade C");
+}
+else {
+  console.log("Failed");
+}
+
+// ARRAYS
+
+
+// CONDITIONALS (SWITCH CASES)
+
+// i want to get day and time using switch cases
+
+let day;
+let now = new Date();
+
+let date = now.getDay();
+let hour = now.getHours();
+let minute = now.getMinutes();
+let second = now.getSeconds();
+
+switch (date) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+    break;
+}
+
+console.log("Today is " + day);
+console.log("Current time is " + hour + ":" + minute + ":" + second);
+
+// Ternary cases
+
+// let age = (age >= 18) ? "You are an adult." : "You are a minor.";
+
+// console.log(age);
+
+// booleans
+
+const hours = new Date().getHours(); 
+let greeting;
+
+if (hours < 12) {
+  greeting = "Good morning!";
+} else if (hours >= 12 && hours < 16) {
+  greeting = "Good afternoon!";
+} else if (hours >= 16 && hours < 20){
+  greeting = "Good evening!";
+} else {
+  greeting = "Good night!";
+}
+console.log(greeting);
+

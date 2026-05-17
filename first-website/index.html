@@ -84,6 +84,52 @@
         </div>
     </section>
 
-    <script src="myScript.js"></script>
+    <div id="DOM">
+        <h1>DOM MANIPULATION</h1>
+        <p>dOM simply means Document Object Model. It is a programming interface used to access HTML, or CSS files, modify, create or delete the contents of an element. This can access elements by id, className, etc. </br> Below are examples of the DOM manipulation:</br> <ol>
+            <li>Click Counter</li>
+            <li>Color Changer</li>
+        </ol></p>
+
+        <button id="myButton">Click Me</button>
+        <p id="myParagraph">This is a paragraph.</p>
+
+        <button id="colorButton">Change Color</button>
+    </div>
+
+    <script>
+        // Click Counter
+        const button = document.getElementById('myButton');
+        const paragraph = document.getElementById('myParagraph');
+        let count = 0;
+
+        button.addEventListener('click', () => {
+            count++;
+            paragraph.textContent = `Button clicked ${count} times`;
+        });
+
+        // Color Changer
+        const colors = ['red', 'green', 'blue', 'orange', 'purple'];
+        const colorButton = document.getElementById('colorButton');
+        const body = document.getElementById('DOM');
+
+        colorButton.addEventListener('click', () => {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            body.style.backgroundColor = randomColor;
+        });
+
+        // added hover effect to the color button
+        colorButton.addEventListener('mouseenter', () => {
+            colorButton.style.backgroundColor = 'pink';
+            body.style.backgroundColor = 'orange';
+            body.style.color = 'black';
+        });
+            colorButton.addEventListener('mouseleave', () => {
+                colorButton.style.backgroundColor = '';
+                body.style.backgroundColor = '';
+                body.style.color = '';
+            });
+    </script>
+    <!-- <script src="myScript.js"></script> -->
 </body>
 </html>
