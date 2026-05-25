@@ -1,0 +1,142 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Example</title> 
+    <style> 
+        body { 
+            background-color: orange; 
+        } 
+    </style> 
+</head> 
+<body id="body"> 
+    <h1 id="doc">Example</h1> 
+    <p>This is an example paragraph.</p> 
+ 
+    <button id="btn">Click here</button> 
+    <p id="demo">Button paragraph</p> 
+ 
+    <button id="bg-pink">Bg to Pink</button> 
+    <button id="bg-white">Bg to White</button> 
+    <button id="bg-yellow">Bg to Yellow</button> 
+    <button id="bg-orange">Bg to Orange</button> 
+    <button id="bg-random">Bg to Random</button> 
+ 
+    <form id="contact" style="margin-top: 4rem;"> 
+        <!-- <legend>Contact Us</legend> --> 
+        <label for="fname">First Name:</label> <br> 
+        <input type="text" id="fname" name="fname" placeholder="Shedrack"> <br> 
+        <label for="lname">Last Name:</label> <br> 
+        <input type="text" id="lname" name="lname" placeholder="Oluwatobi"> <br> 
+        <label for="comment">Comment:</label> <br> 
+        <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Write your comment here"></textarea> <br> 
+        <!-- <input type="button" value="submit"> --> 
+        <button type="submit">Submit</button> 
+ 
+        <!-- <button onclick="">Double</button> --> 
+    </form> 
+ 
+    <p id="form-data"></p> 
+    <div id="form-results"></div> 
+
+    <section id="results" style="background-color: lightgray;">
+        <h2>Login Form</h2>
+        <p>This form would comprise the following:<br/>
+            <ul>
+                <li>Username</li>
+                <li>Email</li>
+                <li>Password</li>
+                <li>Validation message</li>
+                <li>Submit, plus a submit message</li>
+            </ul>
+        </p>
+    
+
+        <form id="validation-form" style="padding: 5%;text-align: left; background-color: white; border-radius: 10px;">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" placeholder="Enter your username"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password"><br>
+            <textarea name="validation-message" id="validation-message" cols="30" rows="5" placeholder="Validation message will appear here"></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+ 
+ 
+      
+    <script> 
+        document.getElementById("btn").addEventListener("click",  
+        function(){ 
+            document.getElementById("demo"). 
+            textContent = "Button Clicked!"; 
+        } 
+        ); 
+ 
+        document.getElementById("bg-pink").addEventListener("click", 
+            function() { 
+                document.getElementById("body").style.backgroundColor = "pink"; 
+            } 
+        ) 
+ 
+        document.getElementById("bg-white").addEventListener('click',  
+            function() { 
+                document.body.style.backgroundColor = "white"; 
+            } 
+        ) 
+ 
+        document.getElementById("bg-yellow").addEventListener('click',  
+            function() { 
+                document.body.style.backgroundColor = "yellow"; 
+            } 
+        ) 
+ 
+        document.getElementById("bg-orange").addEventListener('click',  
+            function() { 
+                document.body.style.backgroundColor = "orange"; 
+            } 
+        ) 
+ 
+        document.getElementById("bg-random").addEventListener('click',  
+            function() { 
+                const colors = ["pink", "white", "yellow", "orange", "lightblue", "lightgreen", "lightcoral", "lightgray"]; 
+                const randomColor = colors[Math.floor(Math.random() * colors.length)]; 
+                document.body.style.backgroundColor = randomColor; 
+            } 
+        ) 
+ 
+        document.getElementById("validation-form").addEventListener("submit", 
+            function (event) { 
+                event.preventDefault(); // Prevent form submission 
+ 
+                const username = document.getElementById("username").value; 
+                const email = document.getElementById("email").value; 
+                const password = document.getElementById("password").value; 
+                const comment = document.getElementById("validation-message").value; 
+ 
+                const result = username + " " + email + ": " + password; 
+ 
+ 
+                document.getElementById("form-data").textContent = result; 
+ 
+            } 
+        ) 
+ 
+        // document.getElementById("fname").addEventListener("input",  
+        //     function() { 
+        //         const firstName = document.getElementById("fname").value; 
+        //         document.getElementById("form-data").textContent = firstName; 
+        //     } 
+        // ) 
+ 
+    
+ 
+ 
+        // const doc = document.getElementById("doc"); 
+        // doc.style.color = "red"; 
+        // doc.textContent = "DOM Effect"; 
+    </script> 
+</body> 
+</html>
